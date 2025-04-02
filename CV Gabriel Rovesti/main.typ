@@ -67,14 +67,16 @@
       #v(3pt)
       #block(fill: white, inset: 6pt, radius: 5pt)[
         #grid(
-          columns: (4.5em, auto),
+          columns: (5em, auto),
           gutter: 10pt,
           [*Indirizzo:*], [Via Tito Speri, 2\\B,\ 35141, Padova],
-          [*Cell:*], [+39 346688 9789],
+          [*Cell:*], [3466889789],
           [*Email:*], [rovestigabriel \ \@gmail.com],
+          [*Progetti:*], [gabrielrovesti \ .github.io],
           [*LinkedIn:*], [gabriel-rovesti- \ 601404220],
           [*GitHub:*], [gabrielrovesti],
           [*Nascita:*], [Bologna, 02/11/2001],
+          [*Auto \ munito:*], [Si - Patente B],
         )
       ]
       
@@ -82,42 +84,49 @@
       #fancy-heading[Competenze Principali]
       #v(3pt)
       #block(fill: white, inset: 6pt, radius: 5pt)[
-        *Linguaggi*
-        #grid(
-          columns: (1.5fr, 1fr),
-          gutter: 10pt,
-          [Java, Python, C, C++], [#skill-bar(90%)],
-          [JavaScript, TypeScript], [#skill-bar(85%)],
-          [PHP, C\#, Rust], [#skill-bar(80%)],
-          [Solidity, MATLAB, Arduino], [#skill-bar(70%)],
-          [Kotlin, Assembly x86, COBOL, Dart], [#skill-bar(65%)],
-        )
-        
-        *Web & Mobile / DevOps*
-        #grid(
-          columns: (1.5fr, 1fr),
-          gutter: 10pt,
-          [HTML, CSS, React, Angular], [#skill-bar(90%)],
-          [WordPress, Mobile Frameworks], [#skill-bar(80%)],
-          [MySQL, PostgreSQL, AWS], [#skill-bar(85%)],
-          [Docker, Jenkins, Qt], [#skill-bar(70%)],
-          [.NET, React Native, Flutter], [#skill-bar(80%)],
-        )
-      ]
+       *Linguaggi di Programmazione*
+      #grid(
+        columns: (2fr, 1fr),
+        gutter: 10pt,
+        [Java, Python, C, C++, LaTeX, Typst], [#skill-bar(90%)],
+        [JavaScript, TypeScript, Rust], [#skill-bar(85%)],
+        [PHP, C\#, F\#, WASM], [#skill-bar(80%)],
+        [Solidity, MATLAB, Kotlin], [#skill-bar(75%)],
+        [Dart, COBOL, Bash, Arduino], [#skill-bar(70%)],
+      )
+      \
+      *Frontend & UI/UX*
+      #grid(
+        columns: (2fr, 1fr),
+        gutter: 10pt,
+        [HTML, CSS, SASS, Bootstrap], [#skill-bar(90%)],
+        [React, Angular, Qt], [#skill-bar(85%)],
+        [React Native, Flutter], [#skill-bar(80%)],
+        [WordPress, Shopify], [#skill-bar(80%)],
+      )
       
-      #v(8pt)
-      #fancy-heading[Punti di forza]
-      #v(3pt)
-      #block(fill: white, inset: 6pt, radius: 5pt)[
-        #grid(
-          columns: (1.5fr, 1.5fr),
-          gutter: 8pt,
-          [- Problem Solving], [- Leadership],
-          [- Comunicazione], [- Gestione Progetti],
-          [- Didattica], [- Adattabilità],
-        )
-      ]
+      *Backend & Database*
+      #grid(
+        columns: (2fr, 1fr),
+        gutter: 10pt,
+        [MySQL, PostgreSQL, MongoDB, Redis], [#skill-bar(85%)],
+        [Spring Boot, .NET, FastAPI], [#skill-bar(80%)],
+        [GraphQL, REST API, RabbitMQ], [#skill-bar(85%)],
+        [Reactive Programming, WebFlux], [#skill-bar(75%)],
+      )
       
+      *DevOps & Infrastructure*
+      #grid(
+        columns: (2fr, 1fr),
+        gutter: 10pt,
+        [Git, GitHub, GitLab], [#skill-bar(90%)],
+        [Docker, Jenkins], [#skill-bar(75%)],
+        [AWS, Google Cloud], [#skill-bar(70%)],
+        [Heroku, Netlify, Ansible], [#skill-bar(65%)],
+      )
+
+      
+      ]
       #v(8pt)
       #fancy-heading[Lingue]
       #v(3pt)
@@ -131,7 +140,9 @@
           [*Spagnolo*], [#skill-bar(40%) A2]
         )
       ]
-      
+      \
+      \
+      \
       #v(8pt)
       #fancy-heading[Riconoscimenti & Certificazioni]
       #v(3pt)
@@ -289,10 +300,8 @@
     
       *Attività extra:* 100 ore Tutor Inclusione, 60 ore Tutor Didattico
     ]
-  ]
-)
 
-    #v(5pt)
+       #v(5pt)
     == Laurea Triennale in Informatica  
     Università degli Studi di Padova #h(1fr) #text(style: "italic", size: 9pt)[09/2020 - 07/2023]
     
@@ -311,6 +320,10 @@
       - Conoscenze matematiche di livello avanzato (Analisi, Calcolo Numerico, Probabilità e Statistica)
       - Basi di diritto informatico
     ]
+  ]
+)
+
+
     
     #v(5pt)
     == Diploma di Perito Informatico  
@@ -320,12 +333,7 @@
       *Voto:* 100/100  
       
       *Competenze:* 
-      - Programmazione C, Java
-      - Progettazione di reti informatiche
-      - Creazione siti e utilizzo CSS, HTML, JavaScript, PHP
-      - Gestione di programmazione socket e servlet
-      - Interazione con database con linguaggi DBMS
-      - Creazione app con Android Studio
-      - Utilizzo e conoscenza del pacchetto Office
-      - Attività di project management
+      - Programmazione C, C++, Java, Cisco Packet Tracer per reti, Project Management, Office Suite (ECDL)
+      - Progettazione di reti informatiche, socket e servlet. Interazione con database con linguaggi DBMS
+      - Creazione siti e utilizzo CSS, HTML, JavaScript, PHP e creazione app con Android Studio
     ]
