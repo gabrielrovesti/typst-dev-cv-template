@@ -34,12 +34,12 @@ Sono presenti due versioni: una vecchia ed una nuova. Sono entrambe realizzate c
    Otterrai un PDF pronto da condividere.
 
 ## Struttura del Progetto
-- **`main.typ`**: File principale con il layout del CV e le informazioni personali.  
+- **`main.typ`**: File principale con il layout del CV e le informazioni personali. Ora disponibile in entrambe le lingue, così da renderne veloce l'editing.
 - **`gabriel.jpg`**: Esempio di immagine per la foto profilo (puoi sostituirla con la tua).  
 - **`README.md`**: Il file che stai leggendo.  
 
 ## Esempio di Codice Principale
-Ecco uno snippet del cuore del CV (puoi trovarlo completo in `main.typ`):
+Ecco uno snippet del cuore del CV (puoi trovarlo completo in uno dei file con prefisso`main.typ`):
 
 ```typst
 #let primary-color = rgb("#0366d6")
