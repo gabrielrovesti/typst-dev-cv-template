@@ -1,0 +1,331 @@
+// ╔══════════════════════════════════════════════════╗
+// ║  CV – Gabriel Rovesti  (Versione Italiana)       ║
+// ╚══════════════════════════════════════════════════╝
+
+#let primary    = rgb("#1a4a8a")
+#let accent     = rgb("#2d7dd2")
+#let sidebar-bg = rgb("#f0f3f8")
+#let tag-fill   = rgb("#dce8f7")
+#let tag-stroke = rgb("#a8c4e8")
+#let muted      = rgb("#5a6272")
+#let body-black = rgb("#1c2430")
+
+// ── geometria ─────────────────────────────────────
+#let sb-w     = 68mm
+#let sb-pad-x = 10pt
+#let rh-pad-l = 14pt
+#let rh-pad-r = 14pt
+#let mg-t     = 13pt
+#let mg-b     = 13pt
+
+#set page(
+  paper: "a4",
+  margin: (top: mg-t, bottom: mg-b, left: sb-w + rh-pad-l, right: rh-pad-r),
+  background: place(
+    top + left,
+    rect(width: sb-w, height: 100%, fill: sidebar-bg)
+  ),
+)
+
+#set text(font: "New Computer Modern", size: 10pt, fill: body-black)
+#set par(justify: true, leading: 0.52em)
+#show heading: set text(font: "New Computer Modern Sans", fill: primary)
+
+// ── funzioni ──────────────────────────────────────
+
+#let skill(s) = box(
+  inset: (x: 4pt, y: 2pt),
+  radius: 2pt,
+  fill: tag-fill,
+  stroke: 0.4pt + tag-stroke,
+  text(size: 7pt, fill: primary, s)
+)
+
+#let sb-sec(title) = {
+  v(5pt)
+  text(fill: primary, weight: "bold", size: 8.5pt, upper(title))
+  v(-5pt)
+  line(length: 100%, stroke: 0.5pt + primary)
+  v(2pt)
+}
+
+#let sec(title) = {
+  v(7pt)
+  text(fill: primary, weight: "bold", size: 10pt, upper(title))
+  v(-5pt)
+  line(length: 100%, stroke: 0.7pt + primary)
+  v(3pt)
+}
+
+#let job(role, company, period, body) = {
+  v(3pt)
+  grid(
+    columns: (1fr, auto),
+    text(weight: "bold", size: 10pt)[#role],
+    text(size: 8.5pt, fill: muted, style: "italic")[#period],
+  )
+  text(size: 9pt, fill: accent)[#company]
+  v(1pt)
+  body
+  v(1pt)
+}
+
+#let edu(degree, school, period, body) = {
+  v(3pt)
+  grid(
+    columns: (1fr, auto),
+    text(weight: "bold", size: 10pt)[#degree],
+    text(size: 8.5pt, fill: muted, style: "italic")[#period],
+  )
+  text(size: 9pt, fill: accent)[#school]
+  v(1pt)
+  body
+  v(1pt)
+}
+
+#let proj-sb(title, tech, desc) = {
+  v(4pt)
+  text(weight: "bold", size: 9pt)[#title]
+  linebreak()
+  text(size: 7.5pt, fill: muted, style: "italic")[#tech]
+  v(1pt)
+  text(size: 9pt)[#desc]
+  v(2pt)
+}
+
+#let place-sidebar(body) = place(
+  top + left,
+  dx: sb-pad-x - sb-w - rh-pad-l,
+  box(width: sb-w - 2 * sb-pad-x)[#body]
+)
+
+// ─────────────────────────────────────────────────
+// PAGINA 1 — Sidebar
+// ─────────────────────────────────────────────────
+
+#place-sidebar[
+  #v(4pt)
+  #align(center)[
+    #box(clip: true, radius: 50%, width: 62%)[
+      #image("gabriel.jpg", width: 100%)
+    ]
+    #v(4pt)
+    #text(size: 12pt, weight: "bold", fill: primary)[Gabriel Rovesti]
+    #v(1pt)
+    #text(size: 7.5pt, fill: muted, style: "italic")[
+      IT Consultant · Full Stack Developer \
+      Docente & Tutor Universitario
+    ]
+  ]
+
+  #sb-sec("Contatti")
+  #set text(size: 8pt)
+  ✉ #link("mailto:rovestigabriel@gmail.com")[rovestigabriel\@gmail.com] \
+  #v(1pt)
+  ✆ +39 346 688 9789 \
+  #v(1pt)
+  ⌂ Padova, Italia \
+  #v(1pt)
+  _GitHub_: #link("https://github.com/gabrielrovesti")[github.com/gabrielrovesti] \
+  #v(1pt)
+  _LinkedIn_: #link("https://linkedin.com/in/gabriel-rovesti-601404220")[linkedin/gabriel-rovesti] \
+  #v(1pt)
+  _Portfolio_: #link("https://gabrielrovesti.github.io")[gabrielrovesti.github.io]
+
+  #sb-sec("Competenze")
+  #set text(size: 8pt)
+
+  *Linguaggi* \
+  #v(1pt)
+  #skill("Java") #skill("Python") #skill("TypeScript") #skill("Rust") \
+  #skill("C/C\+\+") #skill("C\#") #skill("F\#") #skill("Kotlin") \
+  #skill("Elixir") #skill("Go") #skill("Solidity") #skill("SQL")
+
+  #v(4pt)
+  *Frontend & Mobile* \
+  #v(1pt)
+  #skill("React") #skill("React Native") #skill("Angular") \
+  #skill("Flutter") #skill("WebAssembly")
+
+  #v(4pt)
+  *Backend & Cloud* \
+  #v(1pt)
+  #skill("Spring Boot") #skill("FastAPI") #skill(".NET") \
+  #skill("PostgreSQL") #skill("MongoDB") #skill("Redis") \
+  #skill("AWS") #skill("GCP") #skill("Docker") #skill("Kubernetes")
+
+  #v(4pt)
+  *Osservabilità* \
+  #v(1pt)
+  #skill("Grafana") #skill("Splunk") #skill("IBM Instana") #skill("Datadog")
+
+  #v(4pt)
+  *Specializzazioni* \
+  #v(1pt)
+  #skill("WCAG 2.2") #skill("MCP") #skill("AI Agents") \
+  #skill("Reactive Systems") #skill("ML/AI") #skill("Prog. Funzionale")
+
+  #sb-sec("Certificazioni")
+  #set text(size: 8pt)
+  • Anthropic MCP (Intro · Advanced · Claude Code) \
+  • Lightbend Reactive Architecture \
+  • Kubernetes LFS158 — Linux Fnd. \
+  • Cisco Networking · Ethical Hacking \
+  • Datadog Kubernetes Fundamentals \
+  • Cambridge B2 First · Berlitz Tedesco A2
+
+  #sb-sec("Lingue")
+  #set text(size: 8pt)
+  #grid(
+    columns: (1fr, auto),
+    row-gutter: 2pt,
+    column-gutter: 4pt,
+    [Italiano], [C2 — Madrelingua],
+    [Inglese],  [C1 — Avanzato],
+    [Francese], [B1 — Intermedio],
+    [Spagnolo], [A2 — Base],
+    [Tedesco],  [A2 — Base],
+  )
+
+  #sb-sec("Riconoscimenti")
+  #set text(size: 8pt)
+  • *Top 50 STEM* – UniPD 2024/25 \
+  #v(1pt)
+  • *2° posto* – Accessibilità Sito Web UniPD \
+  #v(1pt)
+  • Borse di studio regionali 2019–2022
+]
+
+// ─────────────────────────────────────────────────
+// PAGINA 1 — Contenuto principale
+// ─────────────────────────────────────────────────
+
+
+
+#sec("Esperienza Professionale")
+
+#job("IT Consultant", "Technology Reply – Padova (cliente: Generali)", "09/2025 – Presente")[
+  - Backend su piattaforme enterprise cloud-native per il gruppo *Generali* (settore assicurativo): microservizi *Spring Boot 3*, *Oracle SQL*, refactoring distribuito e analisi evolutiva
+  - Migrazione da *Docker Swarm* a *Kubernetes*; pipeline CI/CD con *Jenkins*; gestione incident con *BMC Helix*
+  - Osservabilità e monitoraggio con *Grafana*, *Splunk* e *IBM Instana*; reperibilità su sonde Genertel/GOL di produzione
+  - Supporto allo sviluppo di soluzioni *AI* per studi peritali e automazione dei processi di Application Maintenance
+]
+
+#job("Insegnante – Sistemi e Reti (ITI)", "ITI Galileo Ferraris – Padova", "09/2024 – 06/2025")[
+  - Insegnamento di architetture di rete, protocolli e sicurezza a \~90 studenti (classi III–IV)
+  - Sviluppo di laboratori pratici con Cisco Packet Tracer e strumenti di rete Linux
+]
+
+#job("Tutor Didattico e di Coordinamento", "Università di Padova – Dip. Matematica", "10/2023 – 09/2025")[
+  - *Tutor di Coordinamento*: gestione di 15+ tutor nei corsi triennali e magistrali
+  - *Tutor Didattico*: Automi e Linguaggi Formali, OOP (triennale); Computability (magistrale, in inglese)
+  - Produzione di materiale didattico avanzato; supporto documentato a centinaia di studenti
+]
+
+#job("Tutor Inclusione & Consulente Accessibilità", "Università di Padova – Servizi Disabilità", "10/2023 – 09/2025")[
+  - 350+ ore di supporto specializzato a studenti DSA/BES/Asperger/autismo in ambito STEM
+  - Gestione prove d'esame personalizzate (ESS3/Cineca, Uniweb); tutor lettore e amanuense
+  - Sviluppo strumenti digitali conformi WCAG 2.1; seminari sull'accessibilità universitaria
+]
+
+#job("Stagista Curriculare – Sviluppatore Blockchain", "Sync Lab S.r.l. – Padova", "03/2023 – 06/2023")[
+  - Implementazione POC DApp Ethereum con EthersJS/Web3JS e standard W3C (SSI/DID)
+  - Studio e applicazione di tecniche Zero-Knowledge Proof per la verifica d'identità
+]
+
+#job("Insegnante Privato & Consulente IT", "Freelance – Italia", "02/2016 – Presente")[
+  - 10+ anni di tutoring in informatica, matematica e lingue; esperto con studenti DSA/ADHD
+  - Consulenza tecnica a startup (Finblock, Vantura): definizione stack tecnologico e piani tecnici
+]
+
+
+#job("Technical Lead & Data Manager", "Clesp S.r.l. – Padova", "07/2020 – 10/2021")[
+  - Gestione database MySQL e sviluppo dashboard KPI per 500+ punti vendita Buffetti
+  - Team leadership nel servizio clienti e automazione delle procedure operative
+]
+
+// ─────────────────────────────────────────────────
+// PAGINA 2
+// ─────────────────────────────────────────────────
+
+#pagebreak()
+
+#place-sidebar[
+  #v(4pt)
+  #sb-sec("Progetti Selezionati")
+
+  #proj-sb(
+    "AccessibleHub",
+    "React Native · TypeScript · WCAG 2.2",
+    [Tesi magistrale: toolkit React Native che implementa WCAG 2.2, MCAG e WCAG2Mobile con moduli interattivi e demo su dispositivo reale.]
+  )
+
+  #proj-sb(
+    "ai-agent-skills",
+    "MCP · Claude Code · Codex CLI",
+    [Libreria portabile di skill strutturate per agenti AI, compatibile con provider multipli. Ogni skill codifica un workflow ingegneristico disciplinato e riutilizzabile.]
+  )
+
+  #proj-sb(
+    "TinyML Interpreter",
+    "F\# · Hindley-Milner",
+    [Interprete di linguaggio ML puramente funzionale con inferenza di tipi HM completa, unificazione e let-polimorfismo.]
+  )
+
+  #proj-sb(
+    "PredictSense",
+    "Python · FastAPI · RabbitMQ · TF",
+    [Pipeline di anomaly detection a microservizi con messaggistica asincrona e dashboard real-time.]
+  )
+
+  #proj-sb(
+    "mini-astarte",
+    "Elixir · MQTT · SQLite",
+    [Piattaforma IoT locale single-tenant ispirata ad Astarte: ingest MQTT + HTTP, storage SQLite.]
+  )
+
+  #proj-sb(
+    "Event Processing Platform",
+    "Spring WebFlux · Redis · MongoDB",
+    [Sistema reattivo: 10K+ eventi/sec con latenza \<50ms e backpressure end-to-end.]
+  )
+
+  #proj-sb(
+    "VerifiedMovies",
+    "Ethereum · Solidity · ZKP",
+    [Tesi triennale: DApp blockchain con Self-Sovereign Identity e Zero-Knowledge Proof secondo standard W3C.]
+  )
+]
+
+// Contenuto principale pagina 2
+#sec("Formazione")
+
+#edu("Laurea Magistrale in Informatica — 104/110", "Università degli Studi di Padova", "09/2023 – 07/2025")[
+  *Major:* Internet, Mobile e Sicurezza (IMS) — sicurezza mobile, reti wireless, crittografia avanzata, big data \
+  *Minor:* Innovazione e Imprenditorialità nell'ICT — gestione startup, ITIL, NIST \
+  *Tesi:* _Designing an accessibility learning toolkit: bridging the gap between guidelines and implementation_ \
+  *Extra:* 400+ ore di tutorato universitario (inclusione, coordinamento, didattico, informativo)
+]
+
+#edu("Laurea Triennale in Informatica — 98/110", "Università degli Studi di Padova", "09/2020 – 07/2023")[
+  Algoritmi, basi di dati, programmazione concorrente, ingegneria del software, sviluppo web accessibile, matematica avanzata. \
+  *Tesi:* _VerifiedMovies — sicurezza e autenticazione mediante blockchain_
+]
+
+#edu("Diploma Perito Informatico — 100/100", "I.I.S. Polo Tecnico di Adria", "09/2015 – 06/2020")[
+  Programmazione C/C\+\+/Java, reti Cisco, sviluppo web (HTML/CSS/JS/PHP), Android, progettazione DB.
+]
+
+#sec("Altre Attività")
+
+#job("Configuratore di Applicazioni Informatiche", "Digife S.r.l. – Ferrara", "01/2019 – 02/2019")[
+  - Sviluppo siti WordPress con plugin WooCommerce; gestione newsletter e contenuti web
+]
+
+#job("Assistente Amministrativo", "CIERRE Elettronica – Serravalle (FE)", "06/2018 – 07/2018")[
+  - Gestione attrezzature, archiviazione ordini, supporto operativo al responsabile di reparto
+]
+
+#job("Autore e Collaboratore", "Wikipedia (italiano/inglese)", "2018 – Presente")[
+  - Contribuzioni attive a voci tecniche e scientifiche in italiano e inglese; revisione articoli di informatica e matematica
+]
