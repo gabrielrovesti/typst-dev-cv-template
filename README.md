@@ -2,8 +2,6 @@
 
 Questo repository fornisce un esempio completo di come creare un Curriculum Vitae dall’aspetto professionale utilizzando [**Typst**](https://typst.app/). È pensato per sviluppatori (o chiunque voglia un CV personalizzabile) che desiderano sfruttare la flessibilità di un linguaggio di markup moderno.
 
-Sono presenti due versioni: una vecchia ed una nuova. Sono entrambe realizzate con l'ausilio di Claude.ai, modelli Sonnet ed Haiku essendo una soluzione custom creata da zero adattandosi a qualcosa di leggibile e utile. 
-
 ## Caratteristiche Principali
 - **Layout su due colonne** (colonna sinistra per contatti, competenze e certificazioni; colonna destra per esperienze lavorative e formazione).
 - **Colori personalizzabili**: i colori principali e di sfondo sono facilmente modificabili (`primary-color`, `light-gray`, ecc.).
@@ -77,7 +75,4 @@ ITIS Galileo Ferraris, Padova #h(1fr) #text(style: "italic", size: 9pt)[09/2024 
 Questo template è rilasciato sotto licenza MIT (o la licenza che preferisci inserire). Sentiti libero di modificarlo e riutilizzarlo per le tue esigenze.
 
 ## Contributi
-Se hai idee o migliorie (es. aggiungere icone, layout a più colonne, ecc.), apri una **Pull Request** o un **Issue** su GitHub. Tutti i contributi sono benvenuti!
-
----
-Speriamo che questo template Typst ti aiuti a creare un CV ordinato e professionale in modo rapido ed efficiente. Buon lavoro!
+Se hai idee o migliorie (es. aggiungere icone, layout a più colonne, ecc.), apri una **Pull Request** o un **Issue** su GitHub. Buon lavoro!
