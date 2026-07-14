@@ -11,12 +11,12 @@
 #let body-black = rgb("#1c2430")
 
 // ── geometria ─────────────────────────────────────
-#let sb-w     = 68mm
+#let sb-w     = 66mm
 #let sb-pad-x = 10pt
-#let rh-pad-l = 14pt
-#let rh-pad-r = 14pt
-#let mg-t     = 13pt
-#let mg-b     = 13pt
+#let rh-pad-l = 13pt
+#let rh-pad-r = 13pt
+#let mg-t     = 12pt
+#let mg-b     = 12pt
 
 #set page(
   paper: "a4",
@@ -28,8 +28,8 @@
 )
 
 #set text(font: "New Computer Modern", size: 10pt, fill: body-black)
-#set par(justify: true, leading: 0.52em)
-#show heading: set text(font: "New Computer Modern Sans", fill: primary)
+#set par(justify: true, leading: 0.52em, spacing: 5pt)
+#show heading: set text(font: "New Computer Modern", fill: primary)
 
 // ── funzioni ──────────────────────────────────────
 
@@ -42,45 +42,49 @@
 )
 
 #let sb-sec(title) = {
-  v(5pt)
+  v(8pt)
   text(fill: primary, weight: "bold", size: 8.5pt, upper(title))
-  v(-5pt)
+  v(-2pt)
   line(length: 100%, stroke: 0.5pt + primary)
-  v(2pt)
+  v(3pt)
 }
 
 #let sec(title) = {
   v(7pt)
-  text(fill: primary, weight: "bold", size: 10pt, upper(title))
-  v(-5pt)
+  text(fill: primary, weight: "bold", size: 9.8pt, upper(title))
+  v(-2pt)
   line(length: 100%, stroke: 0.7pt + primary)
   v(3pt)
 }
 
+#set list(spacing: 0.65em, marker: text(fill: accent)[•])
+
 #let job(role, company, period, body) = {
-  v(3pt)
+  v(4pt)
   grid(
     columns: (1fr, auto),
-    text(weight: "bold", size: 10pt)[#role],
-    text(size: 8.5pt, fill: muted, style: "italic")[#period],
+    text(weight: "bold", size: 9.5pt)[#role],
+    text(size: 8pt, fill: muted, style: "italic")[#period],
   )
-  text(size: 9pt, fill: accent)[#company]
+  text(size: 8.5pt, fill: accent)[#company]
   v(1pt)
+  set text(size: 8.5pt)
+  set par(leading: 0.46em, spacing: 4pt)
   body
-  v(1pt)
 }
 
 #let edu(degree, school, period, body) = {
-  v(3pt)
+  v(4pt)
   grid(
     columns: (1fr, auto),
-    text(weight: "bold", size: 10pt)[#degree],
-    text(size: 8.5pt, fill: muted, style: "italic")[#period],
+    text(weight: "bold", size: 9.5pt)[#degree],
+    text(size: 8pt, fill: muted, style: "italic")[#period],
   )
-  text(size: 9pt, fill: accent)[#school]
+  text(size: 8.5pt, fill: accent)[#school]
   v(1pt)
+  set text(size: 8.5pt)
+  set par(leading: 0.46em, spacing: 4pt)
   body
-  v(1pt)
 }
 
 #let proj-sb(title, tech, desc) = {
@@ -92,6 +96,14 @@
   text(size: 9pt)[#desc]
   v(2pt)
 }
+
+#let proj-compact(title, tech, desc) = block(width: 100%, above: 0pt, below: 0pt)[
+  #v(4pt)
+  #text(weight: "bold", size: 8.3pt)[#title]
+  #text(size: 7pt, fill: muted, style: "italic")[ · #tech]
+  #v(1pt)
+  #text(size: 7.6pt)[#desc]
+]
 
 #let place-sidebar(body) = place(
   top + left,
@@ -113,7 +125,7 @@
     #text(size: 12pt, weight: "bold", fill: primary)[Gabriel Rovesti]
     #v(1pt)
     #text(size: 7.5pt, fill: muted, style: "italic")[
-      IT Consultant · Full Stack Developer \
+      IT Consultant · Backend Developer \
       Docente & Tutor Universitario
     ]
   ]
@@ -138,7 +150,7 @@
   *Linguaggi* \
   #v(1pt)
   #skill("Java") #skill("Python") #skill("TypeScript") #skill("Rust") \
-  #skill("C/C\+\+") #skill("C\#") #skill("F\#") #skill("Kotlin") \
+  #skill("C/C++") #skill("C#") #skill("F#") #skill("Kotlin") \
   #skill("Elixir") #skill("Go") #skill("Solidity") #skill("SQL")
 
   #v(4pt)
@@ -172,7 +184,7 @@
   • Kubernetes LFS158 — Linux Fnd. \
   • Cisco Networking · Ethical Hacking \
   • Datadog Kubernetes Fundamentals \
-  • Cambridge B2 First · Berlitz Tedesco A2
+  • English B2 (UniPD) · Berlitz Tedesco A2
 
   #sb-sec("Lingue")
   #set text(size: 8pt)
@@ -193,7 +205,9 @@
   #v(1pt)
   • *2° posto* – Accessibilità Sito Web UniPD \
   #v(1pt)
-  • Borse di studio regionali 2019–2022
+  • Borse di studio regionali 2019–2022 \
+  #v(1pt)
+  • Autore Wikipedia (IT/EN) dal 2018
 ]
 
 // ─────────────────────────────────────────────────
@@ -205,7 +219,7 @@
 #sec("Esperienza Professionale")
 
 #job("IT Consultant", "Technology Reply – Padova (cliente: Generali)", "09/2025 – Presente")[
-  - Backend su piattaforme enterprise cloud-native per il gruppo *Generali* (settore assicurativo): microservizi *Spring Boot 3*, *Oracle SQL*, refactoring distribuito e analisi evolutiva
+  - Backend su piattaforme enterprise cloud-native per il gruppo *Generali* (settore assicurativo): microservizi *Spring Boot 3*, *Oracle SQL*, refactoring distribuito, analisi evolutiva e quality coverage in compliance *DORA*
   - Migrazione da *Docker Swarm* a *Kubernetes*; pipeline CI/CD con *Jenkins*; gestione incident con *BMC Helix*
   - Osservabilità e monitoraggio con *Grafana*, *Splunk* e *IBM Instana*; reperibilità su sonde Genertel/GOL di produzione
   - Supporto allo sviluppo di soluzioni *AI* per studi peritali e automazione dei processi di Application Maintenance
@@ -244,88 +258,53 @@
   - Team leadership nel servizio clienti e automazione delle procedure operative
 ]
 
-// ─────────────────────────────────────────────────
-// PAGINA 2
-// ─────────────────────────────────────────────────
+#sec("Progetti Selezionati")
 
-#pagebreak()
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 10pt,
+  row-gutter: 3pt,
 
-#place-sidebar[
-  #v(4pt)
-  #sb-sec("Progetti Selezionati")
-
-  #proj-sb(
+  proj-compact(
     "AccessibleHub",
-    "React Native · TypeScript · WCAG 2.2",
-    [Tesi magistrale: toolkit React Native che implementa WCAG 2.2, MCAG e WCAG2Mobile con moduli interattivi e demo su dispositivo reale.]
-  )
-
-  #proj-sb(
+    "React Native · TS · WCAG 2.2",
+    [Tesi magistrale: toolkit React Native per WCAG 2.2/MCAG/WCAG2Mobile con moduli interattivi e demo reale.]
+  ),
+  proj-compact(
     "ai-agent-skills",
-    "MCP · Claude Code · Codex CLI",
-    [Libreria portabile di skill strutturate per agenti AI, compatibile con provider multipli. Ogni skill codifica un workflow ingegneristico disciplinato e riutilizzabile.]
-  )
+    "MCP · Claude Code · Codex",
+    [Libreria portabile di skill per agenti AI multi-provider; workflow ingegneristici disciplinati e riutilizzabili.]
+  ),
 
-  #proj-sb(
-    "TinyML Interpreter",
-    "F\# · Hindley-Milner",
-    [Interprete di linguaggio ML puramente funzionale con inferenza di tipi HM completa, unificazione e let-polimorfismo.]
-  )
+  proj-compact(
+    "spring-boot-migration-guide",
+    "Java · Spring Boot 3/4",
+    [Guida pratica alla migrazione Spring Boot 2.7→3.x→4.x, verificata su fonti ufficiali con demo funzionante ad ogni step.]
+  ),
+  proj-compact(
+    "ctrl-verify",
+    "CIF/ESCET · PyNuSMV · BDD",
+    [Metodi formali simbolici per sistemi reattivi: supervisor synthesis BDD-based e model checking di proprietà safety/response.]
+  ),
 
-  #proj-sb(
-    "PredictSense",
-    "Python · FastAPI · RabbitMQ · TF",
-    [Pipeline di anomaly detection a microservizi con messaggistica asincrona e dashboard real-time.]
-  )
-
-  #proj-sb(
-    "mini-astarte",
-    "Elixir · MQTT · SQLite",
-    [Piattaforma IoT locale single-tenant ispirata ad Astarte: ingest MQTT + HTTP, storage SQLite.]
-  )
-
-  #proj-sb(
-    "Event Processing Platform",
-    "Spring WebFlux · Redis · MongoDB",
-    [Sistema reattivo: 10K+ eventi/sec con latenza \<50ms e backpressure end-to-end.]
-  )
-
-  #proj-sb(
+  proj-compact(
     "VerifiedMovies",
     "Ethereum · Solidity · ZKP",
-    [Tesi triennale: DApp blockchain con Self-Sovereign Identity e Zero-Knowledge Proof secondo standard W3C.]
-  )
-]
+    [Tesi triennale: DApp blockchain con Self-Sovereign Identity e Zero-Knowledge Proof (standard W3C).]
+  ),
+  [],
+)
 
-// Contenuto principale pagina 2
 #sec("Formazione")
 
 #edu("Laurea Magistrale in Informatica — 104/110", "Università degli Studi di Padova", "09/2023 – 07/2025")[
-  *Major:* Internet, Mobile e Sicurezza (IMS) — sicurezza mobile, reti wireless, crittografia avanzata, big data \
-  *Minor:* Innovazione e Imprenditorialità nell'ICT — gestione startup, ITIL, NIST \
-  *Tesi:* _Designing an accessibility learning toolkit: bridging the gap between guidelines and implementation_ \
-  *Extra:* 400+ ore di tutorato universitario (inclusione, coordinamento, didattico, informativo)
+  *Major:* Internet, Mobile e Sicurezza — sicurezza mobile, crittografia avanzata, big data. *Minor:* Innovazione e Imprenditorialità ICT (startup, ITIL, NIST). *Tesi:* _Designing an accessibility learning toolkit._ 400+ ore di tutorato universitario.
 ]
 
 #edu("Laurea Triennale in Informatica — 98/110", "Università degli Studi di Padova", "09/2020 – 07/2023")[
-  Algoritmi, basi di dati, programmazione concorrente, ingegneria del software, sviluppo web accessibile, matematica avanzata. \
-  *Tesi:* _VerifiedMovies — sicurezza e autenticazione mediante blockchain_
+  Algoritmi, basi di dati, programmazione concorrente, ingegneria del software, sviluppo web accessibile. *Tesi:* _VerifiedMovies — sicurezza e autenticazione mediante blockchain._
 ]
 
 #edu("Diploma Perito Informatico — 100/100", "I.I.S. Polo Tecnico di Adria", "09/2015 – 06/2020")[
   Programmazione C/C\+\+/Java, reti Cisco, sviluppo web (HTML/CSS/JS/PHP), Android, progettazione DB.
-]
-
-#sec("Altre Attività")
-
-#job("Configuratore di Applicazioni Informatiche", "Digife S.r.l. – Ferrara", "01/2019 – 02/2019")[
-  - Sviluppo siti WordPress con plugin WooCommerce; gestione newsletter e contenuti web
-]
-
-#job("Assistente Amministrativo", "CIERRE Elettronica – Serravalle (FE)", "06/2018 – 07/2018")[
-  - Gestione attrezzature, archiviazione ordini, supporto operativo al responsabile di reparto
-]
-
-#job("Autore e Collaboratore", "Wikipedia (italiano/inglese)", "2018 – Presente")[
-  - Contribuzioni attive a voci tecniche e scientifiche in italiano e inglese; revisione articoli di informatica e matematica
 ]
