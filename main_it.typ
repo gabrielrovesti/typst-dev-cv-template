@@ -219,9 +219,9 @@
 #sec("Esperienza Professionale")
 
 #job("IT Consultant", "Technology Reply – Padova (cliente: Generali)", "09/2025 – Presente")[
-  - Backend su piattaforme enterprise cloud-native per il gruppo *Generali* (settore assicurativo): microservizi *Spring Boot 3*, *Oracle SQL*, refactoring distribuito, analisi evolutiva e quality coverage in compliance *DORA*
-  - Migrazione da *Docker Swarm* a *Kubernetes*; pipeline CI/CD con *Jenkins*; gestione incident con *BMC Helix*
-  - Osservabilità e monitoraggio con *Grafana*, *Splunk* e *IBM Instana*; reperibilità su sonde Genertel/GOL di produzione
+  - Referente e AM (Application Maintenance) per le piattaforme *EmployeeUp*, *Business Partner* e *Provvigioni* del gruppo *Generali* (settore assicurativo) su microservizi *Spring Boot 3*: migrazione, refactoring distribuito, gestione flussi di integrazione con validazione funzionale, analisi evolutiva e quality coverage in compliance *DORA*
+  - Migrazione da *Docker Swarm* a *Kubernetes*, interventi su DB *Oracle SQL*; pipeline CI/CD con *Jenkins* su *AWS*; gestione incident con *BMC Helix*
+  - Partecipazione a progetti microservizi cloud/on-premise e omnichannel; osservabilità con *Grafana*, *Splunk* e *IBM Instana*; reperibilità su sonde Genertel/GOL di produzione
   - Supporto allo sviluppo di soluzioni *AI* per studi peritali e automazione dei processi di Application Maintenance
 ]
 
@@ -238,7 +238,7 @@
 
 #job("Tutor Inclusione & Consulente Accessibilità", "Università di Padova – Servizi Disabilità", "10/2023 – 09/2025")[
   - 350+ ore di supporto specializzato a studenti DSA/BES/Asperger/autismo in ambito STEM
-  - Gestione prove d'esame personalizzate (ESS3/Cineca, Uniweb); tutor lettore e amanuense
+  - Gestione prove d'esame personalizzate (ESSE3/Cineca, Uniweb); tutor lettore e amanuense
   - Sviluppo strumenti digitali conformi WCAG 2.1; seminari sull'accessibilità universitaria
 ]
 

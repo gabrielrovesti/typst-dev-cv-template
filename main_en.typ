@@ -219,9 +219,9 @@
 #sec("Professional Experience")
 
 #job("IT Consultant", "Technology Reply – Padova (client: Generali)", "09/2025 – Present")[
-  - Backend on cloud-native enterprise platforms for the *Generali* group (insurance sector): *Spring Boot 3* microservices, *Oracle SQL*, distributed refactoring, evolutionary analysis and quality coverage in *DORA* compliance
-  - Migration from *Docker Swarm* to *Kubernetes*; CI/CD pipelines with *Jenkins*; incident management with *BMC Helix*
-  - Observability and monitoring with *Grafana*, *Splunk* and *IBM Instana*; on-call support for Genertel/GOL production probes
+  - Point of contact and AM (Application Maintenance) for the *EmployeeUp*, *Business Partner* and *Provvigioni* platforms at *Generali* (insurance sector) on *Spring Boot 3* microservices: migration, distributed refactoring, integration-flow management with functional validation, evolutionary analysis, *DORA*-compliant quality coverage
+  - Migration from *Docker Swarm* to *Kubernetes*, *Oracle SQL* DB work; CI/CD pipelines with *Jenkins* on *AWS*; incident management with *BMC Helix*
+  - Contributed to cloud/on-premise microservices and omnichannel projects; observability via *Grafana*, *Splunk*, *IBM Instana*; on-call for Genertel/GOL production probes
   - Support for developing *AI* solutions for expert appraisal workflows and Application Maintenance process automation
 ]
 
@@ -238,7 +238,7 @@
 
 #job("Inclusion Tutor & Accessibility Consultant", "University of Padua – Disability Services", "10/2023 – 09/2025")[
   - 350+ hours of specialized support for students with SLD/BES/Asperger's/autism in STEM subjects
-  - Managed personalized exams (ESS3/Cineca, Uniweb); reader and scribe tutor
+  - Managed personalized exams (ESSE3/Cineca, Uniweb); reader and scribe tutor
   - Developed WCAG 2.1-compliant digital tools; ran university accessibility seminars
 ]
 
@@ -305,6 +305,10 @@
   Algorithms, databases, concurrent programming, software engineering, accessible web development. *Thesis:* _VerifiedMovies — blockchain-based security and authentication._
 ]
 
-#edu("IT Technician Diploma — 100/100", "I.I.S. Polo Tecnico di Adria", "09/2015 – 06/2020")[
-  C/C\+\+/Java, Cisco networking, web development (HTML/CSS/JS/PHP), Android, database design.
-]
+#v(1pt)
+#grid(
+  columns: (1fr, auto),
+  text(weight: "bold", size: 9pt)[IT Technician Diploma — 100/100],
+  text(size: 7.6pt, fill: muted, style: "italic")[09/2015 – 06/2020],
+)
+#text(size: 8pt, fill: accent)[I.I.S. Polo Tecnico di Adria] — #text(size: 7.8pt)[C/C\+\+/Java, Cisco networking, web development, Android, database design.]
