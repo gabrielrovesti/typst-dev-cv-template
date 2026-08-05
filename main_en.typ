@@ -184,7 +184,9 @@
   • Kubernetes LFS158 — Linux Foundation \
   • Cisco Networking · Ethical Hacking \
   • Datadog Kubernetes Fundamentals \
-  • English B2 (UniPD) · Berlitz German A2
+  • English B2 (UniPD) · Berlitz German A2 \
+  • IELTS General Training · Band 7.5 \
+  (CEFR C1)
 
   #sb-sec("Languages")
   #set text(size: 8pt)
