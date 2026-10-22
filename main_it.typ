@@ -125,8 +125,7 @@
     #text(size: 12pt, weight: "bold", fill: primary)[Gabriel Rovesti]
     #v(1pt)
     #text(size: 7.5pt, fill: muted, style: "italic")[
-      IT Consultant · Backend Developer \
-      Docente & Tutor Universitario
+      IT Consultant · Full Stack Developer \
     ]
   ]
 
@@ -221,10 +220,11 @@
 #sec("Esperienza Professionale")
 
 #job("IT Consultant", "Technology Reply – Padova (cliente: Generali)", "09/2025 – Presente")[
-  - Referente e AM (Application Maintenance) per le piattaforme *EmployeeUp*, *Business Partner* e *Provvigioni* del gruppo *Generali* (settore assicurativo) su microservizi *Spring Boot 3*: migrazione, refactoring distribuito, gestione flussi di integrazione con validazione funzionale, analisi evolutiva e quality coverage in compliance *DORA*
-  - Migrazione da *Docker Swarm* a *Kubernetes*, interventi su DB *Oracle SQL*; pipeline CI/CD con *Jenkins* su *AWS*; gestione incident con *BMC Helix*
-  - Partecipazione a progetti microservizi cloud/on-premise e omnichannel; osservabilità con *Grafana*, *Splunk* e *IBM Instana*; reperibilità su sonde Genertel/GOL di produzione
-  - Supporto allo sviluppo di soluzioni *AI* per studi peritali e automazione dei processi di Application Maintenance
+
+- Referente AM per i sistemi core *EmployeeUp*, *Business Partner* e *Provvigioni*: gestione dell'intero lifecycle di microservizi *Java/Spring Boot 3*, refactoring distribuito, integrazioni enterprise e compliance *DORA*
+- Refactoring architetturale da *Docker Swarm* a *Kubernetes*, tuning di query su DB *Oracle SQL*, gestione pipeline CI/CD *Jenkins* su *AWS* e securizzazione con proxy enterprise e remediation *CVE*
+-  Reperibilità L2/L3 e monitoraggio proattivo per sonde *Genertel/GOL* tramite *Grafana*, *Splunk*, *IBM Instana* e ticketing *BMC Helix*
+-  Progettazione di PoC *GenAI* per perizie assicurative e automazione AM con *GitHub Copilot*, *Claude Code* e lo strumento custom *User Story Advisor* per l'ecosistema *Atlassian* (*Jira*, *Confluence*, *Forge*)
 ]
 
 #job("Insegnante – Sistemi e Reti (ITI)", "ITI Galileo Ferraris – Padova", "09/2024 – 06/2025")[
@@ -249,7 +249,7 @@
   - Studio e applicazione di tecniche Zero-Knowledge Proof per la verifica d'identità
 ]
 
-#job("Insegnante Privato & Consulente IT", "Freelance – Italia", "02/2016 – Presente")[
+#job("Insegnante Privato & Consulente IT", "Freelance – Italia", "02/2016 – 02-2026")[
   - 10+ anni di tutoring in informatica, matematica e lingue; esperto con studenti DSA/ADHD
   - Consulenza tecnica a startup (Finblock, Vantura): definizione stack tecnologico e piani tecnici
 ]

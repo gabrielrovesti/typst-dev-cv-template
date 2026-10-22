@@ -125,8 +125,7 @@
     #text(size: 12pt, weight: "bold", fill: primary)[Gabriel Rovesti]
     #v(1pt)
     #text(size: 7.5pt, fill: muted, style: "italic")[
-      IT Consultant · Backend Developer \
-      University Lecturer & Tutor
+      IT Consultant · Full Stack Developer
     ]
   ]
 
@@ -221,10 +220,10 @@
 #sec("Professional Experience")
 
 #job("IT Consultant", "Technology Reply – Padova (client: Generali)", "09/2025 – Present")[
-  - Point of contact and AM (Application Maintenance) for the *EmployeeUp*, *Business Partner* and *Provvigioni* platforms at *Generali* (insurance sector) on *Spring Boot 3* microservices: migration, distributed refactoring, integration-flow management with functional validation, evolutionary analysis, *DORA*-compliant quality coverage
-  - Migration from *Docker Swarm* to *Kubernetes*, *Oracle SQL* DB work; CI/CD pipelines with *Jenkins* on *AWS*; incident management with *BMC Helix*
-  - Contributed to cloud/on-premise microservices and omnichannel projects; observability via *Grafana*, *Splunk*, *IBM Instana*; on-call for Genertel/GOL production probes
-  - Support for developing *AI* solutions for expert appraisal workflows and Application Maintenance process automation
+- AM Lead for the core systems *EmployeeUp*, *Business Partner*, and *Commissions*: managing  lifecycle of *Java/Spring Boot 3* microservices, distributed refactoring and *DORA* compliance
+- Architectural refactoring from *Docker Swarm* to *Kubernetes*, *Oracle SQL* database query tuning, management of *Jenkins* CI/CD pipelines on *AWS*, and security hardening with enterprise proxies and *CVE* remediation
+-  L2/L3 on-call support and proactive monitoring for *Genertel/GOL* probes via *Grafana*, *Splunk*, *IBM Instana*, and *BMC Helix* ticketing
+-  Design of *GenAI* proof-of-concepts (PoCs) for insurance claims assessment and AM automation using *GitHub Copilot*, *Claude Code*, and the custom *User Story Advisor* tool for the *Atlassian* ecosystem (*Jira*, *Confluence*, *Forge*)
 ]
 
 #job("Teacher – Networking and Systems (ITI)", "ITI Galileo Ferraris – Padova", "09/2024 – 06/2025")[
@@ -249,7 +248,7 @@
   - Studied and applied Zero-Knowledge Proof techniques for identity verification
 ]
 
-#job("Private Tutor & IT Consultant", "Freelance – Italy", "02/2016 – Present")[
+#job("Private Tutor & IT Consultant", "Freelance – Italy", "02/2016 – 02-2026")[
   - 10+ years tutoring in computer science, mathematics and languages; experienced with SLD/ADHD students
   - Technical consulting for startups (Finblock, Vantura): technology stack definition and technical planning
 ]
